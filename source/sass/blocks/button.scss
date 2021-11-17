@@ -1,0 +1,31 @@
+.button {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  @include text(12px, 15px, $white, 700);
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $orange;
+  border: 2px solid $orange;
+
+  &:hover,
+  &:focus {
+    background-color: $orange-hover;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.8;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 288px;
+  }
+}

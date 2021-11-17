@@ -1,0 +1,16 @@
+.questions {
+  width: 100%;
+  min-height: 455px;
+  margin-top: 140px;
+  padding-bottom: 160px;
+  display: flex;
+  flex-row: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: $text-dark;
+  background-image:
+    linear-gradient(to right, rgba($orange, 0.75) 0, rgba($orange, 0.75) 70%, $white 70%);
+  background-image: url("../../img/backgrounds/contacts-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}

@@ -1,0 +1,25 @@
+.page-footer {
+  background-color: $white;
+}
+
+.page-footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.page-footer__link {
+  display: block;
+  @include text(14px, 17.07px, rgba($text-dark, 0.5), 400);
+}

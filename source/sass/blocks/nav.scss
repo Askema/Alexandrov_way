@@ -1,0 +1,154 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  background-color: $white;
+
+  @media (min-width: $desktop-width) {
+    min-height: 100px;
+  }
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.nav__list {
+  @include ul();
+  background-color: $white;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+
+  @media (max-width: $desktop-width) {
+    flex-direction: column;
+    padding-top: 132px;
+    width: 320px;
+
+    &--closed {
+      display: none;
+    }
+
+    &--open {
+      position:absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      height: 568px;
+      background-color: $white;
+      z-index: 1;
+    }
+  }
+}
+
+.nav__list--closed {
+  @media (max-width: $desktop-width) {
+    //display: none;
+  }
+}
+
+.nav__item {
+  position: relative;
+
+  @media (max-width: $desktop-width) {
+    @include text(20px, 28px, $text-nav, 600);
+    width: 100%;
+    margin-bottom: 30px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &::after {
+      @include pseudo();
+      top: 24.6px;
+      right: 24.6px;
+      width: 7.4px;
+      height: 12px;
+      background: url(../img/arrow.svg) no-repeat;
+    }
+  }
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav__item:last-child {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.nav__link {
+  @media (max-width: $desktop-width) {
+    padding: 17px 35px 17.4px 16px;
+    display: block;
+    width: 100%;
+    background-color: $light-grey;
+  }
+}
+
+.nav__link--number {
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.nav__button {
+  display: none;
+  z-index: 2;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: 0;
+
+    &--open {
+      background-color: #FE7865;
+    }
+
+    &--close {
+      background: center no-repeat url(../img/close.svg);
+    }
+  }
+}
+
+.nav__hamburger {
+  height: 1px;
+  width: 22.5px;
+  display: block;
+  position: absolute;
+  right: 13.75px;
+  background-color: $white;
+
+  &::before {
+    @include pseudo();
+    top: -5.25px;
+    height: 1px;
+    width: 22.5px;
+    background-color: $white;
+  }
+
+  &::after {
+    @include pseudo();
+    top: 5.25px;
+    height: 1px;
+    width: 22.5px;
+    background-color: $white;
+  }
+}

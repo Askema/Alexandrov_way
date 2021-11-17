@@ -1,0 +1,36 @@
+.page-header {
+  font-size: 14px;
+  line-height: 17, 07px;
+  @include text(14px, 17.07px, $text-dark, normal);
+  background-color: $white;
+  min-width: 100px;
+
+  @media (max-width: $desktop-width) {
+    min-height: 50px;
+  }
+}
+.page-header__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__logo-wrapper {
+  height: 22px;
+  margin-right: auto;
+  position: relative;
+  margin: 14px 0;
+
+  @media (max-width: $desktop-width) {
+    align-self: flex-start;
+  }
+}
+
+.page-header__logo {
+  position: relative;
+}
+
+.page-header__logo--y {
+  position: absolute;
+  right: -0.9px;
+  bottom: -1.3px;
+}

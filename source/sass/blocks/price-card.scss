@@ -1,0 +1,106 @@
+.price-card {
+  display: flex;
+flex-wrap: wrap;;
+  flex-direction: column;
+  padding: 40px 30px 30px;
+  border: 1px solid $text-color;
+  border-radius: 6px;
+
+  &:hover,
+  &:focus-within {
+    border-color: $orange;
+    outline: 2px solid $orange;
+
+    .price-card__title {
+      color: $orange;
+    }
+
+    .price-card__list::before {
+      background-color: $orange;
+    }
+
+    .price-card__list-item::before {
+      display: none;
+    }
+
+    .price-card__list-item::after {
+      display: block;
+    }
+  }
+}
+
+.price-card__title {
+  display: flex;
+flex-wrap: wrap;;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+  @include text(28px, 38px,rgba($text-dark, 0.7), 600);
+  letter-spacing: -1.27px;
+}
+
+.price-card__price {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.price-card__intro {
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 24px;
+}
+
+.price-card__list {
+  position: relative;
+  @include ul();
+  padding-top: 30px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgba($text-black, 0.3);
+  }
+}
+
+.price-card__list-item {
+  position: relative;
+  padding-left: 30px;
+  line-height: 32px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    top: 10px;
+    left: 0;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-position: top left;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    background-image: url("../../img/icons/tick.svg");
+    background-color: $text-dark;
+  }
+
+  &::after {
+    display: none;
+    background-image: url("../../img/icons/tick-focused.svg");
+    background-color: $orange;
+  }
+}
+
+.price-card__button {
+  margin-top: auto;
+}

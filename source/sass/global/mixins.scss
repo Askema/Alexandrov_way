@@ -1,0 +1,24 @@
+@mixin text($font-size, $line-height, $color:#000000, $font-weight:normal) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin pseudo($display: block, $position: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $position;
+}
+
+@mixin container($padding: 0 50px) {
+  padding: $padding;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+@mixin ul() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

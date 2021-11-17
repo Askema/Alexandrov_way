@@ -1,0 +1,36 @@
+.contacts {
+  border-right: 1px solid $footer-line;
+  margin-left: 65px;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 50px;
+    border-right: none;
+    width: 39%;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: inherit;
+    margin-left: 0;
+    margin-bottom: 30px;
+    padding-bottom: 21px;
+
+    text-align: center;
+
+    border-bottom: 1px solid $footer-line;
+    border-right: none;
+  }
+}
+
+.contacts__link {
+  display: block;
+  padding-left: 40px;
+  text-decoration: underline;
+
+  &--email {
+    @include text(14px, 17.07px, $orange, 400);
+  }
+
+  &--tel {
+    @include text(16px, 32px, $orange, 400);
+  }
+}

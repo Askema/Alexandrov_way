@@ -1,0 +1,51 @@
+.review {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: flex;
+flex-wrap: wrap;;
+  margin: auto;
+  padding: 30px;
+  width: 382px;
+  min-width: 367px;
+  background-color: $white;
+  transform: translateY(-50%);
+}
+
+.review__heading {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+
+  &::after {
+    width: 68px;
+    height: 1px;
+  }
+}
+
+.review__text {
+  margin-top: 40px;
+  margin-bottom: 35px;
+  font-size: 14px;
+  letter-spacing: -0.41px;
+  color: $text-color;
+}
+
+.review__author-wrapper {
+  display: flex;
+flex-wrap: wrap;;
+}
+
+.review__author-img {
+  display: block;
+  width: 38px;
+  height: 38px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: rgba($text-dark, 0.5);
+}
+
+.review__author-name {
+  font-weight: 500;
+  font-style: normal;
+}

@@ -1,0 +1,45 @@
+.questions-form {
+  max-width: 655px;
+  padding: 50px;
+  color: $text-dark;
+  background-color: $white;
+  box-shadow: 0px 4px 30px rgba($shadow, 0.1);
+}
+
+.questions-form__heading {
+  margin: 0;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+}
+
+.questions-form__text {
+  margin-top: 0;
+  margin-bottom: 25px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.questions-form__input {
+  width: 265px;
+  padding: 15px;
+
+  &::placeholder {
+    font-family: inherit;
+    @include text(14px, 17px, $text-dark, inherit)
+  }
+
+  &:nth-of-type(2n+1) {
+    margin-right: 20px;
+  }
+}
+
+.questions-form__button {
+  margin: 0 auto;
+  margin-top: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

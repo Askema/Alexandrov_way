@@ -1,0 +1,28 @@
+.country-tabs {
+  @include ul();
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  border-bottom: 1px solid rgba($text-black, 0.3);
+}
+
+.country-tabs__item:not(:last-child) {
+  margin-right: 100px;
+}
+
+.country-tabs__link {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  @include text(20px, 25px, rgba($text-black, 0.3), inherit);
+  letter-spacing: -0.41px;
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  &:active {
+    color: $orange-hover;
+  }
+}

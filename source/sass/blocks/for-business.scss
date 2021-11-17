@@ -1,0 +1,12 @@
+.for-business {
+  margin-left: 55px;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+.for-business__text {
+  @include text(14px, 24px, rgba($text-dark, 0.5), inherit);
+}

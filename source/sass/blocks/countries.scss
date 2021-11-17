@@ -1,0 +1,10 @@
+.countries {
+  min-height: 1200px;
+  margin-bottom: -270px;
+  background: url("../../img/backgrounds/europe-map.svg") center no-repeat;
+}
+
+.countries__slider {
+  @include ul();
+  padding-top: 65px;
+}

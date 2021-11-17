@@ -1,0 +1,34 @@
+.country {
+  position: relative;
+}
+
+.country__inner {
+  display: grid;
+  grid-template-areas:
+    "heading image review"
+    "text image review"
+    "button image review";
+  grid-template-columns: 2fr 2fr 230px;
+  gap: 30px;
+}
+
+.country__heading {
+  grid-area: heading;
+}
+
+.country__description {
+  grid-area: text;
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: $text-color;
+}
+
+.country__img {
+  grid-area: image;
+}
+
+.country__button {
+  width: 250px;
+  grid-area: button;
+  padding: 30px;
+}
